@@ -1,7 +1,8 @@
-# Industrial Equipment Failure Prediction
+# PredictaMaint
 
-**A Machine Learning–Based Predictive Maintenance System**
+**ML-Powered Predictive Maintenance Platform**
 
+PredictaMaint is an end-to-end machine learning system that forecasts industrial equipment failures before they occur. By analyzing real-time sensor data—including pressure, temperature, rotational speed, vibration, and humidity—the platform identifies early warning patterns and predicts whether equipment is likely to fail. The solution is deployed as a production-ready REST API, enabling seamless integration with existing monitoring dashboards and IoT pipelines. Built with XGBoost, Flask, and Docker, it supports both local deployment and cloud scaling on AWS Elastic Beanstalk.
 
 ---
 
@@ -13,7 +14,7 @@
 | **Project Type** | College / Academic Project |
 | **Guided By** | **Dr. Yashaswi Verma** and **Dr. Richa Singh** |
 
-This project was carried out at IIT Jodhpur under the guidance of Dr. Yashaswi Verma and Dr. Richa Singh. It focuses on predicting industrial equipment failures using machine learning and deploying the solution as a web service for use in predictive maintenance.
+PredictaMaint was developed at IIT Jodhpur under the guidance of Dr. Yashaswi Verma and Dr. Richa Singh. It focuses on predicting industrial equipment failures using machine learning and deploying the solution as a web service for use in predictive maintenance.
 
 ---
 
@@ -71,8 +72,7 @@ python predict.py
 8. [Cloud Deployment](#cloud-deployment)
 9. [Options for Reproducers](#options-for-reproducers)
 10. [Illustrated Steps for AWS Elastic Beanstalk Deployment](#illustrated-steps-for-aws-elastic-beanstalk-deployment)
-11. [Reproducibility](#reproducibility)
-12. [Acknowledgments](#acknowledgments)
+11. [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -120,7 +120,7 @@ The chosen model is deployed using **Flask**, which exposes a REST API to submit
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/Bruce2Cluny191/Industrial-Equipment-Failure-Prediction.git
+   git clone https://github.com/YOUR_USERNAME/Industrial-Equipment-Failure-Prediction.git
    cd Industrial-Equipment-Failure-Prediction
    ```
 
@@ -198,16 +198,13 @@ To reproduce or test the deployment:
    eb init -p "Docker running on 64bit Amazon Linux 2023" failure-serving -r eu-west-1
    eb local run --port 9696
    ```
-   ![EB init & local run](Images/AWS_EB_init_local_run.png)
    - EB local listening  
-   ![EB local listening](Images/AWS_EB_init_local_listening.png)
 
 2. **Elastic Beanstalk cloud deployment**
    - EB create cloud environment:
    ```bash
    eb create failure-serving-env --enable-spot
    ```
-   ![EB create cloud environment](Images/AWS_EB_create_cloud_env.png)
    - EB cloud environment monitoring  
    ![EB cloud environment monitoring](Images/AWS_EB_env_monitoring.png)
 
@@ -220,30 +217,16 @@ To reproduce or test the deployment:
    ```bash
    python predict-test.py
    ```
-   ![Local & cloud testing](Images/AWS_EB_testing_local_then_cloud_env.png)
    - EB cloud environment termination:
    ```bash
    eb terminate failure-serving-env
    ```
-   ![EB cloud environment terminating](Images/AWS_EB_env_terminated.png)
 
 ---
 
-## Reproducibility
 
-To reproduce this project:
-
-1. **Download the dataset** from [Kaggle – Industrial Equipment Monitoring Dataset](https://www.kaggle.com/datasets/dnkumars/industrial-equipment-monitoring-dataset/data) or from the repository if provided.
-2. **Explore the data** using `notebook.ipynb`.
-3. **Train the model:**
-   ```bash
-   python train.py
-   ```
-4. **Deploy** using the instructions in the [Deployment](#deployment) and [Containerization](#containerization) sections.
-
----
 
 ## Acknowledgments
 
 This project was completed at **Indian Institute of Technology Jodhpur (IIT Jodhpur)**. We thank **Dr. Yashaswi Verma** and **Dr. Richa Singh** for their guidance, feedback, and support throughout the project.
-# Industrial-Equipment-Failure-Prediction
+
