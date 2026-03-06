@@ -1,0 +1,18 @@
+# Core ML & data
+numpy
+pandas
+scikit-learn
+xgboost
+
+# Visualization & notebook
+matplotlib
+seaborn
+jupyter
+
+# API server
+flask
+gunicorn
+waitress
+
+# For predict-test.py
+requests
